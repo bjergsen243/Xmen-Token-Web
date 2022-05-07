@@ -1,5 +1,5 @@
 # ABCD
-npx install
-cd front-end
-yarn start
+- npx install
+- cd front-end
+- yarn start
 
