@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 const rpcURL = 'https://goerli.infura.io/v3/8b38be151db64bac988b2e35faf230ce'
 const web3 = new Web3(rpcURL)
-let tokenAddress = "0xf986adC0Dc8727a11dC4D655909a91B50Ac60df4";
+let tokenAddress = "YOUR_TOKEN_ADDRESS";
 let walletAddress = "YOUR_ADDRESS";
 
 // The minimum ABI to get ERC20 Token balance
