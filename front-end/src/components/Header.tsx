@@ -14,9 +14,12 @@ export const Header = () => {
   const classes = useStyles()
   
   const { account, activateBrowserWallet, deactivate } = useEthers()
-  //const userBalance = useEtherBalance(account)
+  const userBalance = useEtherBalance(account)
   const tokenBalance = useTokenBalance("0x534Eb14712bE0730af161Bc746E984487bD25102", account);
   const formattedTokenBalance: number = tokenBalance ? parseFloat(formatUnits(tokenBalance, 18)) : 0
+
+ 
+
   const isConnected = account !== undefined
 
   return (
@@ -31,7 +34,7 @@ export const Header = () => {
           </Button >
            
           <Button color="primary" variant="contained">
-            {`Amount = ${formattedTokenBalance}`}
+            {`Amount = ${tokenBalance}`}
           </Button>
         </>
       ) : (
