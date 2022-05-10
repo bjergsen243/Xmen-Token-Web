@@ -24,7 +24,7 @@ web3.eth.getTransactionCount(fromAddress).then((count) => {
     gasLimit: web3.utils.toHex(450000),
     to: tokenAddress,
     value: 0x0,
-    data: contract.methods.transfer(amount).encodeABI(),
+    data: contract.methods.transfer(toAddress, amount).encodeABI(),
     nonce: web3.utils.toHex(count),
   };
 
