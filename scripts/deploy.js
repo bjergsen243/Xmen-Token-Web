@@ -7,11 +7,12 @@ async function main() {
     
     console.log("Account balance:", (await ethers.utils.formatEther(weiAmount)));
   
-    // make sure to replace the "GoofyGoober" reference with your own ERC-20 name!
+    
     const Token = await ethers.getContractFactory("XmenToken");
     const token = await Token.deploy();
     await token.deployed();
     console.log("Token address:", token.address);
+    
   }
   
   main()
