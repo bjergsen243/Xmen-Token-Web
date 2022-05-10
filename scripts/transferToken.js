@@ -1,15 +1,15 @@
 const Web3 = require("web3");
 const Tx = require("ethereumjs-tx");
-const rpcURL = "https://goerli.infura.io/v3/8b38be151db64bac988b2e35faf230ce";
+const rpcURL = "https://goerli.infura.io/v3/YOUR_API_KEY";
 const web3 = new Web3(rpcURL);
 const abi = require("./../abi/contracts/XmenToken.sol/XmenToken.json");
-let tokenAddress = "0x1D9AF023BD6D7D21eC70655882BB36260Ef74De9";
+let tokenAddress = "YOUR_TOKEN_ADDRESS";
 let privateKey = Buffer.from(
-  "ebd0dcb9164aafc9ade34a8a098c4b8614f8545a9e6d0334c5c34c47783ee9c0",
+  "YOUR_PRIVATE_KEY",
   "hex"
 );
-let fromAddress = "0xC333bB038A89289B08683dfD428f9707B6F65da2";
-let toAddress = "0x3A96CB910189840727Dcb0b9EE303391EA934504";
+let fromAddress = "YOUR_ADDRESS";
+let toAddress = "TO_ADDRESS";
 
 // Get ERC20 Token contract instance
 let contract = new web3.eth.Contract(abi, tokenAddress);
